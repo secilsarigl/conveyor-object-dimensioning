@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+venv/
+.venv/
+env/
+
+# Django — yerel veritabanı (kullanıcı hesapları/şifre özetleri içerir)
+db.sqlite3
+*.sqlite3
+
+# Gizli bilgiler
+.env
+*.env
+
+# Eğitim/çalıştırma çıktıları ve veri setleri
+datasets/
+runs/
+*.zip
+kamera_test_*.jpg
+
+# Editör / işletim sistemi
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+desktop.ini

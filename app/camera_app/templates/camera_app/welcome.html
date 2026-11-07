@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoşgeldiniz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, #0f4c5c 0%, #2c7a7b 50%, #e3b23c 100%);
+        }
+
+        .background-overlay {
+            
+            background-size: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.7; /* Arka plan resminin şeffaflığını ayarlayın */
+        }
+
+        .container {
+            text-align: center;
+            margin-top: 50px;
+            background: rgba(255, 255, 255, 0.8); /* Beyaz arka planı biraz şeffaf yapın */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 250px;
+        }
+
+        .card h2 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 1em;
+            margin-bottom: 20px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="background-overlay"></div>
+    <div class="container">
+        <h1>Hoşgeldiniz</h1>
+        <div class="card-container">
+            <div class="card">
+                <h2>Kayıt Ol</h2>
+                <p>Yeni bir hesap oluşturun.</p>
+                <a href="{% url 'register' %}" class="button">Kayıt Ol</a>
+            </div>
+            <div class="card">
+                <h2>Giriş Yap</h2>
+                <p>Mevcut hesabınızla giriş yapın.</p>
+                <a href="{% url 'login' %}" class="button">Giriş Yap</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
